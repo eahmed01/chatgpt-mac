@@ -3,6 +3,8 @@ require("update-electron-app")();
 const { menubar } = require("menubar");
 const Nucleus = require("nucleus-analytics");
 
+const OpenAIUrl = "https://chat.openai.com/chat?model=gpt-4";
+
 const path = require("path");
 const {
   app,
@@ -70,7 +72,7 @@ app.on("ready", () => {
       {
         label: "Open in browser",
         click: () => {
-          shell.openExternal("https://chat.openai.com/chat");
+          shell.openExternal(OpenAIUrl);
         },
       },
       {
